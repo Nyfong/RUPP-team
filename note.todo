@@ -1,0 +1,96 @@
+   <!-- navigation         -->
+        <section class="sec-1 w-full h-[70px] sticky top-0 bg-white z-[1000] px-6  max-sm:p-0 sm:p-0" >
+        <nav class=" w-1200 h-full flex m-auto ">
+            <div class="nav-expand w-[50%] h-full flex items-center p-4">
+                <p class="hvr-underline-revea  hvr-underline-from-left ">
+                    OYTEE
+                </p>
+            </div>
+            <div class="h-full flex items-center justify-between p-3 xl:hidden  lg:hidden  sm:visible max-sm:visible">
+                    <ul>
+                        <li>
+                            <a href="" class=" hover:text-green-500">
+                                <!-- <Icon name="" -->
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            <div class="nav-navbar w-[50%] h-full flex items-center justify-between p-3 max-sm:hidden max-md:hidden max-lg:hidden ">
+                <div class="menu  w-[75%]">
+                    <ul class="flex gap-10">
+                        <li>
+                            <a href="" class=" hover:text-green-500">Home</a>
+                        </li>
+                       
+                        <li>
+                            <a href="" class=" hover:text-green-500">Shop</a>
+                        </li>
+                        <li>
+                            <a href="" class="  text-green-300 hover:text-green-500">Plan Cares</a>
+                        </li>
+                        <li>
+                            <a href="" class=" hover:text-green-500">WorkShops</a>
+                        </li>
+                        <li>
+                            <a href="" class=" hover:text-green-500">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="profile w-[25%] flex items-center gap-2 h-full justify-around">
+
+                    <!-- shoping bag -->
+                    <div class="text-xl relative" > 
+                    <Icon  name="uiw:shopping-cart"/>
+                        <div class="notification w-[20px] h-[20px] rounded-full bg-green-400 absolute  text-white flex items-center justify-center text-[7px] top-[-5px] left-[15px]" id="favorite">
+                            1
+                        </div>
+                    </div>
+
+                    <!-- favorite -->
+                    <div class="text-xl relative" > 
+                    <Icon  name="uiw:heart-on"/>
+                        <div class="notification w-[20px] h-[20px] rounded-full bg-green-400 absolute  text-white flex items-center justify-center text-[7px] top-[-5px] left-[15px]" id="favorite">
+                            1
+                        </div>
+                    </div>
+
+                    <!-- user profile -->
+                    <a href="/dist/profile/profile.html">
+                        <div class="rounded-full w-[40px] h-[40px] bg-green-400  border-2 border-green-500 relative   hover:Pfdropdown visible">
+                            <img src="https://www.meme-arsenal.com/memes/04a8b5db8363deefc63fd35461ce6c68.jpg" 
+                            class="w-full h-full object-cover border-green-500 rounded-full"                        
+                            alt="">
+                            <span class="bottom-0 left-7 absolute  w-3.5 h-3.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full"></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        </section>
+
+
+
+
+
+========plamt care=====
+
+
+ <div class="container w-[1200px] h-full m-auto bg-orange-600">
+        <div
+          class="row-1 title w-full h-[30%] bg-pink-100 flex items-center px-4"
+        >
+          <h1 class="text-2xl">Make your home beautiful with our plan guide</h1>
+        </div>
+        <div class="row-2 pictures w-full h-[70%] bg-orange-400"></div>
+      </div>
+
+
+      //// "dev": "nuxt dev",
+
+        "dev": "HOST=192.168.1.82 PORT=3333 nuxt dev",
+
+        devServer: {
+    host: "192.168.1.82", // your local IP address
+    port: 3333, // the port you want to use
+  },

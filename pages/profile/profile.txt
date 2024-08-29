@@ -1,0 +1,103 @@
+<script setup>
+import { ref } from "vue";
+import navigation from "../navigationbar/navigation.vue";
+const isOpen = ref(false);
+const ui = /* ui */ {
+  background: "bg-white dark:bg-slate-900",
+};
+const { data: product } = await useFetch(
+  "https://api.freeapi.app/api/v1/public/randomproducts?page=1&limit=10&inc=category%2Cprice%2Cthumbnail%2Cimages%2Ctitle%2Cid&query=mens-watches"
+);
+</script>
+
+<template>
+  <div>
+    <!-- navigation         -->
+    <navigation />
+    <!-- main section -->
+    <main>
+      <section class="main bg-slate-100 w-full h-screen p-3">
+        <!-- wrapper-grid profile -->
+        <div
+          class="warpper-grid grid grid-cols-[200px_500px] gap-2 place-content-center"
+        >
+          <div
+            class="bg-slate-50 rounded-xl grid grid-cols-subgrid row-span-5 grid-rows-subgrid gap-2"
+          >
+            <div class="flex justify-center">
+              <NuxtLink to="/Login/login">
+                <img
+                  class="rounded-[50%] w-[100px] h-[100px] object-cover"
+                  src="https://png.pngtree.com/thumb_back/fh260/background/20230523/pngtree-an-anime-with-glasses-and-scarves-image_2694420.jpg"
+                  alt=""
+                />
+              </NuxtLink>
+            </div>
+            <div class="flex justify-center">
+              <p class="font-bold">Niga Change</p>
+            </div>
+            <div class="0 flex items-center justify-center">
+              <span class="p-2 bg-orange-500 rounded-xl text-white font-bold">
+                <Icon name="bi:person-arms-up" />
+                My prfile</span
+              >
+            </div>
+            <div class="0 flex items-center justify-center">
+              <span class="p-2 bg-orange-500 rounded-xl text-white font-bold">
+                <Icon name="bi:chat-heart" />
+                My favorite</span
+              >
+            </div>
+            <div class="0 flex items-center justify-center">
+              <span class="p-2 bg-orange-500 rounded-xl text-white font-bold">
+                <Icon name="bi:wallet-fill" />
+                My payment</span
+              >
+            </div>
+          </div>
+          <div
+            class="bg-slate-50 rounded-xl grid row-span-5 grid-cols-subgrid grid-rows-subgrid gap-2"
+          >
+            <div class="bg-pink-200">
+              <p>1</p>
+            </div>
+            <div class="bg-pink-200">
+              <p>hello</p>
+            </div>
+            <div class="bg-pink-200">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Perspiciatis, ab laboriosamacere illo, modi porro beatae dolor
+                accusantium sunt qui harum enim nihil nobis accusamus
+                exercitationem, libero necessita assumenda consequuntur.
+              </p>
+            </div>
+            <div class="bg-pink-200">
+              <p>4</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- test -->
+
+        <UDivider label="OR" />
+
+        <!-- 2 -->
+        <section>
+          <div class="grid grid-cols-4 p-4 gap-3 max-sm:grid-cols-1">
+            <div
+              class="bg-slate-200"
+              v-for="products in product.data['data']"
+              :key="(products, i)"
+            >
+              <img :src="products.images[0]" class="w-full" alt="" />
+              <p class="text-black font-bolder text-3xl">
+                $ {{ products.price }} {{ products.title }}
+              </p>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+  </div>
+</template>
